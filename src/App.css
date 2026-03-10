@@ -1,0 +1,652 @@
+:root {
+  --bg-primary: #06070b;
+  --bg-panel: rgba(255, 255, 255, 0.05);
+  --border-soft: rgba(255, 255, 255, 0.1);
+  --text-soft: rgba(255, 255, 255, 0.65);
+  --text-faint: rgba(255, 255, 255, 0.45);
+  --cyan-glow: rgba(59, 130, 246, 0.18);
+  --violet-glow: rgba(168, 85, 247, 0.16);
+}
+
+.nubbin-page {
+  background:
+    radial-gradient(circle at top, rgba(37, 99, 235, 0.18), transparent 30%),
+    radial-gradient(circle at 20% 30%, rgba(168, 85, 247, 0.12), transparent 25%),
+    var(--bg-primary);
+}
+
+.nubbin-glow-panel {
+  position: relative;
+  overflow: hidden;
+  border: 1px solid var(--border-soft);
+  border-radius: 2rem;
+  background: var(--bg-panel);
+  backdrop-filter: blur(12px);
+}
+
+.nubbin-glow-panel::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(circle at top right, var(--cyan-glow), transparent 28%),
+    radial-gradient(circle at bottom left, var(--violet-glow), transparent 24%);
+  pointer-events: none;
+}
+
+.nubbin-glow-panel > * {
+  position: relative;
+  z-index: 1;
+}
+
+.nubbin-section-title {
+  letter-spacing: -0.03em;
+}
+
+.nubbin-eyebrow {
+  text-transform: uppercase;
+  letter-spacing: 0.28em;
+  color: rgba(103, 232, 249, 0.7);
+}
+
+.nubbin-muted {
+  color: var(--text-soft);
+}
+
+.nubbin-faint {
+  color: var(--text-faint);
+}
+
+.nubbin-hero-chip {
+  position: relative;
+  width: 13rem;
+  height: 18rem;
+}
+
+.nubbin-hero-chip-outer,
+.nubbin-hero-chip-middle,
+.nubbin-hero-chip-inner {
+  position: absolute;
+  border-radius: 50%;
+}
+
+.nubbin-hero-chip-outer {
+  inset: 0;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  background: linear-gradient(to bottom, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.05));
+  box-shadow: 0 0 80px rgba(59, 130, 246, 0.25);
+}
+
+.nubbin-hero-chip-middle {
+  inset: 14%;
+  border: 1px solid rgba(103, 232, 249, 0.4);
+  background: linear-gradient(to bottom, rgba(34, 211, 238, 0.2), rgba(59, 130, 246, 0.1));
+}
+
+.nubbin-hero-chip-inner {
+  inset: 24%;
+  border: 1px solid rgba(196, 181, 253, 0.3);
+  background: radial-gradient(circle, rgba(59, 130, 246, 0.35), transparent 60%);
+}
+
+.nubbin-pill {
+  border: 1px solid var(--border-soft);
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 9999px;
+}
+
+.nubbin-media-placeholder {
+  background:
+    radial-gradient(circle at top left, rgba(59, 130, 246, 0.25), transparent 32%),
+    linear-gradient(180deg, #0f1220, #06070b);
+}
+
+.nubbin-warning {
+  border: 1px solid rgba(251, 191, 36, 0.2);
+  background: rgba(251, 191, 36, 0.1);
+  color: rgba(254, 243, 199, 0.9);
+}
+
+.nubbin-danger-card {
+  border: 1px solid var(--border-soft);
+  background: rgba(0, 0, 0, 0.25);
+}
+
+/* Header Styles */
+.nubbin-header {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  background: rgba(6, 7, 11, 0.8);
+  backdrop-filter: blur(20px);
+}
+
+.nubbin-header-container {
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  max-width: 80rem;
+  align-items: center;
+  justify-content: space-between;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+
+@media (min-width: 1024px) {
+  .nubbin-header-container {
+    padding-left: 2.5rem;
+    padding-right: 2.5rem;
+  }
+}
+
+.nubbin-logo-container {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.nubbin-logo-icon {
+  display: flex;
+  height: 2.5rem;
+  width: 2.5rem;
+  align-items: center;
+  justify-content: center;
+  border-radius: 0.5rem;
+  border: 1px solid rgba(34, 211, 238, 0.3);
+  background: rgba(34, 211, 238, 0.1);
+}
+
+.nubbin-logo-text h1 {
+  font-size: 0.875rem;
+  font-weight: 600;
+  letter-spacing: 0.24em;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.nubbin-logo-text p {
+  font-size: 0.75rem;
+  color: rgba(255, 255, 255, 0.45);
+}
+
+.nubbin-nav {
+  display: none;
+  align-items: center;
+  gap: 2rem;
+  font-size: 0.875rem;
+  color: rgba(255, 255, 255, 0.65);
+}
+
+@media (min-width: 768px) {
+  .nubbin-nav {
+    display: flex;
+  }
+}
+
+.nubbin-nav a {
+  transition: color 0.2s;
+}
+
+.nubbin-nav a:hover {
+  color: white;
+}
+
+/* Overview Section */
+.nubbin-overview-section {
+  margin-left: auto;
+  margin-right: auto;
+  display: grid;
+  max-width: 80rem;
+  gap: 2.5rem;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+  padding-bottom: 5rem;
+  padding-top: 4rem;
+}
+
+@media (min-width: 1024px) {
+  .nubbin-overview-section {
+    grid-template-columns: 1.05fr 0.95fr;
+    padding-left: 2.5rem;
+    padding-right: 2.5rem;
+    padding-bottom: 7rem;
+    padding-top: 6rem;
+  }
+}
+
+.nubbin-overview-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.nubbin-overview-text-block {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.nubbin-headline {
+  max-width: 56rem;
+  font-size: 3rem;
+  font-weight: 600;
+  letter-spacing: -0.02em;
+  color: white;
+}
+
+@media (min-width: 768px) {
+  .nubbin-headline {
+    font-size: 4.5rem;
+  }
+}
+
+.nubbin-headline-gradient {
+  display: block;
+  background: linear-gradient(to right, #06f6d6, #60a5fa, #a78bfa);
+  background-clip: text;
+  color: transparent;
+}
+
+.nubbin-description {
+  max-width: 42rem;
+  font-size: 1rem;
+  line-height: 2rem;
+  color: rgba(255, 255, 255, 0.65);
+}
+
+@media (min-width: 768px) {
+  .nubbin-description {
+    font-size: 1.125rem;
+  }
+}
+
+.nubbin-button-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.nubbin-partners-section {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding-top: 1rem;
+}
+
+.nubbin-partners-label {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.28em;
+  color: rgba(255, 255, 255, 0.4);
+}
+
+.nubbin-partners-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+/* Hero Chip Container */
+.nubbin-hero-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  border-radius: 1.75rem;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: linear-gradient(to bottom right, #0e1220, #0a0d15, #111426);
+}
+
+.nubbin-placeholder-label {
+  pointer-events: none;
+  position: absolute;
+  inset: 2rem;
+  bottom: 2rem;
+  border-radius: 1rem;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: rgba(0, 0, 0, 0.3);
+  padding: 1rem;
+  backdrop-filter: blur(12px);
+}
+
+.nubbin-placeholder-label-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 0.875rem;
+}
+
+.nubbin-placeholder-text {
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.nubbin-placeholder-hint {
+  color: rgb(34, 211, 238);
+}
+
+.nubbin-chip-stats {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 0.75rem;
+  font-size: 0.875rem;
+}
+
+.nubbin-stat-card {
+  border-radius: 1rem;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: rgba(255, 255, 255, 0.05);
+  padding: 1rem;
+}
+
+.nubbin-stat-label {
+  color: rgba(255, 255, 255, 0.45);
+}
+
+.nubbin-stat-value {
+  margin-top: 0.5rem;
+  font-size: 1.125rem;
+  font-weight: 500;
+  color: white;
+}
+
+/* Product Section */
+.nubbin-product-section {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 80rem;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+}
+
+@media (min-width: 1024px) {
+  .nubbin-product-section {
+    padding-left: 2.5rem;
+    padding-right: 2.5rem;
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+  }
+}
+
+.nubbin-features-grid {
+  margin-top: 2.5rem;
+  display: grid;
+  gap: 1.5rem;
+}
+
+@media (min-width: 1024px) {
+  .nubbin-features-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+.nubbin-feature-card {
+  height: 100%;
+  border-radius: 2rem;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: rgba(255, 255, 255, 0.05);
+  color: white;
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.2);
+}
+
+.nubbin-feature-content {
+  padding: 1.5rem;
+}
+
+.nubbin-feature-icon {
+  margin-bottom: 1.25rem;
+  display: flex;
+  height: 3rem;
+  width: 3rem;
+  align-items: center;
+  justify-content: center;
+  border-radius: 0.5rem;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.nubbin-feature-eyebrow {
+  font-size: 0.875rem;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  color: rgba(255, 255, 255, 0.45);
+}
+
+.nubbin-feature-title {
+  margin-top: 0.75rem;
+  font-size: 1.5rem;
+  font-weight: 500;
+  line-height: 1.25;
+}
+
+.nubbin-feature-description {
+  margin-top: 1rem;
+  font-size: 0.875rem;
+  line-height: 1.75;
+  color: rgba(255, 255, 255, 0.65);
+}
+
+.nubbin-feature-media-container {
+  margin-top: 1.5rem;
+  overflow: hidden;
+  border-radius: 1.5rem;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: linear-gradient(to bottom right, #111521, #090b12);
+  padding: 0.75rem;
+}
+
+/* Consumers Section */
+.nubbin-consumers-section {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 80rem;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+}
+
+@media (min-width: 1024px) {
+  .nubbin-consumers-section {
+    padding-left: 2.5rem;
+    padding-right: 2.5rem;
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+  }
+}
+
+.nubbin-consumers-grid {
+  display: grid;
+  gap: 1.5rem;
+}
+
+@media (min-width: 1024px) {
+  .nubbin-consumers-grid {
+    grid-template-columns: 1fr 0.9fr;
+  }
+}
+
+.nubbin-benefits-grid {
+  margin-top: 2rem;
+  display: grid;
+  gap: 1rem;
+}
+
+@media (min-width: 640px) {
+  .nubbin-benefits-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+.nubbin-benefit-item {
+  border-radius: 1rem;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: rgba(0, 0, 0, 0.2);
+  padding: 1rem;
+  font-size: 0.875rem;
+  color: rgba(255, 255, 255, 0.75);
+}
+
+.nubbin-developer-links {
+  margin-top: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.nubbin-developer-link-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-radius: 1rem;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: rgba(0, 0, 0, 0.2);
+  padding-left: 1rem;
+  padding-right: 1rem;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  font-size: 0.875rem;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+/* FAQ Section */
+.nubbin-faq-section {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 64rem;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+}
+
+@media (min-width: 1024px) {
+  .nubbin-faq-section {
+    padding-left: 2.5rem;
+    padding-right: 2.5rem;
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+  }
+}
+
+.nubbin-faq-accordion {
+  margin-top: 2.5rem;
+  border-radius: 2rem;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: rgba(255, 255, 255, 0.05);
+  padding: 0.75rem;
+}
+
+@media (min-width: 768px) {
+  .nubbin-faq-accordion {
+    padding: 1rem;
+  }
+}
+
+.nubbin-faq-footer {
+  margin-top: 1rem;
+  font-size: 0.875rem;
+  color: rgba(255, 255, 255, 0.4);
+}
+
+.nubbin-accordion-item {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+.nubbin-accordion-trigger {
+  text-align: left;
+  font-size: 1rem;
+  color: white;
+}
+
+.nubbin-accordion-content {
+  max-width: 48rem;
+  font-size: 0.875rem;
+  line-height: 1.75;
+  color: rgba(255, 255, 255, 0.65);
+}
+
+/* Terms Section */
+.nubbin-terms-section {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 80rem;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+}
+
+@media (min-width: 1024px) {
+  .nubbin-terms-section {
+    padding-left: 2.5rem;
+    padding-right: 2.5rem;
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+  }
+}
+
+.nubbin-terms-container {
+  display: grid;
+  gap: 2rem;
+}
+
+@media (min-width: 1024px) {
+  .nubbin-terms-container {
+    grid-template-columns: 0.85fr 1.15fr;
+  }
+}
+
+.nubbin-terms-heading {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.28em;
+  color: rgba(239, 68, 68, 0.7);
+}
+
+.nubbin-terms-title {
+  margin-top: 0.75rem;
+  font-size: 1.875rem;
+  font-weight: 600;
+  letter-spacing: -0.02em;
+  color: white;
+}
+
+@media (min-width: 768px) {
+  .nubbin-terms-title {
+    font-size: 2.25rem;
+  }
+}
+
+.nubbin-terms-description {
+  margin-top: 1rem;
+  font-size: 0.875rem;
+  line-height: 1.75;
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.nubbin-fine-print-grid {
+  display: grid;
+  gap: 1rem;
+}
+
+@media (min-width: 640px) {
+  .nubbin-fine-print-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+.nubbin-fine-print-item {
+  border-radius: 1rem;
+  padding: 1.25rem;
+  font-size: 0.875rem;
+  line-height: 1.75;
+  color: rgba(255, 255, 255, 0.75);
+}
