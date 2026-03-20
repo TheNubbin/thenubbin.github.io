@@ -66,17 +66,9 @@ export default function App() {
               </Button>
             </div>
 
-            <div className="nubbin-partners-section">
-              <p className="nubbin-partners-label">Trusted by experimental partners</p>
-              <div className="nubbin-partners-list">
-                {partners.map((partner) => (
-                  <div key={partner} className="nubbin-pill px-4 py-2 text-sm text-white/70">
-                    {partner}
-                  </div>
-                ))}
-              </div>
-            </div>
+            
           </div>
+          
 
           <GlowPanel className="min-h-[520px] p-6 md:p-8">
             <div className="grid h-full gap-6 md:grid-rows-[auto_1fr_auto]">
@@ -108,6 +100,17 @@ export default function App() {
                     <span className="nubbin-placeholder-text">Interactive 3D model placeholder</span>
                     <span className="nubbin-placeholder-hint">Scroll to orbit</span>
                   </div>
+                </div>
+              </div>
+
+              <div className="nubbin-partners-section">
+                <p className="nubbin-partners-label">Trusted by experimental partners</p>
+                <div className="nubbin-partners-list">
+                  {partners.map((partner) => (
+                    <div key={partner} className="nubbin-pill px-4 py-2 text-sm text-white/70">
+                      {partner}
+                    </div>
+                  ))}
                 </div>
               </div>
 

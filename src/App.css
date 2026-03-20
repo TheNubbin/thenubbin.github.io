@@ -357,7 +357,7 @@
 .nubbin-product-section {
   margin-left: auto;
   margin-right: auto;
-  max-width: 80rem;
+  /* max-width: 100rem; */
   padding-left: 1.5rem;
   padding-right: 1.5rem;
   padding-top: 3rem;
@@ -649,4 +649,13 @@
   font-size: 0.875rem;
   line-height: 1.75;
   color: rgba(255, 255, 255, 0.75);
+}
+
+.nubbin-canvas {
+  position: fixed;
+  overflow: hidden;
+  z-index: 10;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
 }

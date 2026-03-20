@@ -1,28 +1,45 @@
 import { Gamepad2, Brain, Headphones } from "lucide-react";
 
-export const partners = ["Callister Inc.", "Eulogy", "Meta", "Tempk", "Infinity Labs"];
+export const partners = [
+  { name: "Callister Inc.", logo: "/src/assets/logo_callister.png" },
+  { name: "Eulogy", logo: "/src/assets/logo_eulogy.png" },
+  { name: "Meta", logo: "/src/assets/logo_meta.png" },
+  { name: "Google", logo: "/src/assets/logo_google.png" },
+  { name: "OpenAI", logo: "/src/assets/logo_openai.png" },
+  { name: "Microsoft", logo: "/src/assets/logo_microsoft.png" },
+  { name: "Apple", logo: "/src/assets/logo_apple.png" },
+  { name: "Qualcomm", logo: "/src/assets/logo_qualcomm.png" },
+  { name: "Black Mirror", logo: "/src/assets/logo_black_mirror.png" },
+  { name: "Netflix", logo: "/src/assets/logo_netflix.png" },
+];
 
 export const features = [
   {
-    icon: Gamepad2,
-    eyebrow: "Game without limits",
-    title: "Leave the controller behind.",
-    description:
-      "A cinematic product section for immersive gameplay, responsive motion, and full sensory interaction.",
-  },
-  {
     icon: Brain,
-    eyebrow: "Unleash your senses",
-    title: "Re-experience memory with precision.",
+    eyebrow: "Unleash your",
+    keyword: "Senses",
     description:
       "A showcase area for emotional recall, sensory playback, and tightly controlled corporate messaging.",
+    img: "src/assets/bg_senses.jpg",
+    img_ar: "16 / 9",
+  },
+  {
+    icon: Gamepad2,
+    eyebrow: "Game without",
+    keyword: "Limits",
+    description:
+      "A cinematic product section for immersive gameplay, responsive motion, and full sensory interaction.",
+    img: "src/assets/bg_game.jpg",
+    img_ar: "20 / 9",
   },
   {
     icon: Headphones,
-    eyebrow: "Hear exceptional sound",
-    title: "Live inside the music.",
+    eyebrow: "Hear exceptional",
+    keyword: "Sound",
     description:
       "A media block for premium audio storytelling, performance scenes, and luxury-brand positioning.",
+    img: "src/assets/bg_music.png",
+    img_ar: "2039 / 1131",
   },
 ];
 
@@ -69,9 +86,96 @@ export const developerLinks = [
   "Review neural integration docs",
 ];
 
-export const finePrint = [
-  "We are not responsible for neurological injury, memory instability, or clone-related incidents.",
-  "Use of the product grants access to sensory and memory-adjacent data.",
-  "Collected data may be retained, processed, and reused at company discretion.",
-  "Independent misuse may void all safety representations and warranty protections.",
-];
+export const siteTexts = {
+  // Header
+  header: {
+    logo: "NUBBIN",
+    tagline: "Neural Experience Platform",
+    nav: {
+      overview: "Overview",
+      product: "Product",
+      consumers: "Try Now",
+      faq: "FAQ",
+      terms: "Terms and Conditions"
+    },
+    requestAccess: "Request Access",
+  },
+
+  // Hero Section
+  hero: {
+    title: "Step into the future with",
+    titleHighlight: "Nubbin",
+    description:
+      "A dark, polished landing page framework for a fictional brain-chip company. Sleek on the surface, unsettling underneath.",
+  },
+
+  // Partners Carousel
+  partners: {
+    label: "Used by many companies you know and love",
+  },
+
+  // Product Section
+  product: {
+    eyebrow: "Product narrative",
+    title: "A modular section system for cinematic propaganda.",
+    description:
+      "Three campaign blocks built around gaming, memory, and sound. Swap in stills, clips, or interactive media later.",
+  },
+
+  // Consumers Section
+  consumers: {
+    eyebrow: "For consumers",
+    title: "Upgrade yourself.",
+    description:
+      "A benefit-heavy section that sounds reassuring while quietly implying risk.",
+    buttonText: "Learn more",
+  },
+
+  // Developers Section
+  developers: {
+    eyebrow: "For developers",
+    title: "Build the future.",
+    description:
+      "A companion block for SDK access, dev kits, and cheerful legal language.",
+    disclaimer: "*Developer assumes all legal responsibilities.",
+  },
+
+  // FAQ Section
+  faq: {
+    eyebrow: "FAQ",
+    title: "Still unsure? We've got all the answers right here.",
+    disclaimer:
+      "*Use of the Nubbin means you automatically agree to our terms and conditions.",
+  },
+
+  // Newsletter Section
+  newsletter: {
+    eyebrow: "Newsletter",
+    title: "Stay updated",
+    description: "Get important news and updates about Nubbin.",
+    placeholder: "Enter your email",
+    buttonText: "Subscribe",
+  },
+
+  // Footer
+  footer: {
+    about: {
+      title: "About us",
+      description:
+        "We build experimental tools, developer kits, and consumer upgrades designed to make the future slightly more predictable and slightly more confusing.",
+      note: "Founded somewhere between optimism and legal review.",
+    },
+    links: {
+      title: "Links",
+      items: ["Documentation", "Developers", "API status", "Privacy"],
+    },
+    company: {
+      title: "Company",
+      items: ["About", "Careers", "Contact", "Press"],
+    },
+    copyright: "© 2026 Carmen Tan. All rights reserved.",
+    bottomLinks: {
+      terms: "Terms and Conditions",
+    },
+  },
+};
