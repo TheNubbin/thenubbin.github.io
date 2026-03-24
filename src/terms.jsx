@@ -3,8 +3,8 @@ import { ShieldCheck, AlertTriangle, Scale, Lock, Home } from "lucide-react";
 import { useNavigate } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 
-import { SectionHeader } from "./assets/section_header.jsx";
-import { GlowPanel } from "./assets/glow_panel.jsx";
+import { SectionHeader } from "./components/section_header.jsx";
+import { GlowPanel } from "./components/glow_panel.jsx";
 import {
   Accordion,
   AccordionContent,

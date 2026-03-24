@@ -1,16 +1,31 @@
 import { Gamepad2, Brain, Headphones } from "lucide-react";
 
+import logoCallister from '@/assets/logo_callister.png'
+import logoEulogy from '@/assets/logo_eulogy.png'
+import logoMeta from '@/assets/logo_meta.png'
+import logoGoogle from '@/assets/logo_google.png'
+import logoOpenAI from '@/assets/logo_openai.png'
+import logoMicrosoft from '@/assets/logo_microsoft.png'
+import logoApple from '@/assets/logo_apple.png'
+import logoQualcomm from '@/assets/logo_qualcomm.png'
+import logoBlackMirror from '@/assets/logo_black_mirror.png'
+import logoNetflix from '@/assets/logo_netflix.png'
+
+import sensesBackground from '@/assets/bg_senses.jpg';
+import gameBackground from '@/assets/bg_game.jpg';
+import musicBackground from '@/assets/bg_music.png';
+
 export const partners = [
-  { name: "Callister Inc.", logo: "/src/assets/logo_callister.png" },
-  { name: "Eulogy", logo: "/src/assets/logo_eulogy.png" },
-  { name: "Meta", logo: "/src/assets/logo_meta.png" },
-  { name: "Google", logo: "/src/assets/logo_google.png" },
-  { name: "OpenAI", logo: "/src/assets/logo_openai.png" },
-  { name: "Microsoft", logo: "/src/assets/logo_microsoft.png" },
-  { name: "Apple", logo: "/src/assets/logo_apple.png" },
-  { name: "Qualcomm", logo: "/src/assets/logo_qualcomm.png" },
-  { name: "Black Mirror", logo: "/src/assets/logo_black_mirror.png" },
-  { name: "Netflix", logo: "/src/assets/logo_netflix.png" },
+  { name: "Callister Inc.", logo: logoCallister },
+  { name: "Eulogy", logo: logoEulogy },
+  { name: "Meta", logo: logoMeta },
+  { name: "Google", logo: logoGoogle },
+  { name: "OpenAI", logo: logoOpenAI },
+  { name: "Microsoft", logo: logoMicrosoft },
+  { name: "Apple", logo: logoApple },
+  { name: "Qualcomm", logo: logoQualcomm },
+  { name: "Black Mirror", logo: logoBlackMirror },
+  { name: "Netflix", logo: logoNetflix },
 ];
 
 export const features = [
@@ -20,7 +35,7 @@ export const features = [
     keyword: "Senses",
     description:
       "A showcase area for emotional recall, sensory playback, and tightly controlled corporate messaging.",
-    img: "src/assets/bg_senses.jpg",
+    img: sensesBackground,
     img_ar: "16 / 9",
   },
   {
@@ -29,7 +44,7 @@ export const features = [
     keyword: "Limits",
     description:
       "A cinematic product section for immersive gameplay, responsive motion, and full sensory interaction.",
-    img: "src/assets/bg_game.jpg",
+    img: gameBackground,
     img_ar: "20 / 9",
   },
   {
@@ -38,7 +53,7 @@ export const features = [
     keyword: "Sound",
     description:
       "A media block for premium audio storytelling, performance scenes, and luxury-brand positioning.",
-    img: "src/assets/bg_music.png",
+    img: musicBackground,
     img_ar: "2039 / 1131",
   },
 ];

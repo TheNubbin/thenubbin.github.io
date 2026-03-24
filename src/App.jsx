@@ -1,8 +1,6 @@
 import React from "react";
-// import { motion } from "framer-motion";
+
 import { Cpu, ChevronRight } from "lucide-react";
-import { Badge } from "@/components/ui/badge";
-import NubbinCanvas from "./components/NubbinCanvas";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input"
 import {
@@ -22,10 +20,10 @@ import {
 } from "@/components/ui/accordion";
 
 import "./App.css";
-import { SectionHeader } from "./assets/section_header.jsx";
-import { GlowPanel } from "./assets/glow_panel.jsx";
-import { Carousel } from "./assets/carousel.jsx";
-import { Info } from "./assets/info_card.jsx";
+import { SectionHeader } from "./components/section_header.jsx";
+import { GlowPanel } from "./components/glow_panel.jsx";
+import { Carousel } from "./components/carousel.jsx";
+import { Info } from "./components/info_card.jsx";
 import {
   partners,
   features,
@@ -35,9 +33,10 @@ import {
   siteTexts,
 } from "./assets/site_content.js";
 
+import NubbinCanvas from "./components/NubbinCanvas";
+
 export default function App() {
   return (
-    
     <div
       className="min-h-screen bg-[#06070b] text-white"
       style={{

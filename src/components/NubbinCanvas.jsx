@@ -5,7 +5,7 @@ import { EffectComposer } from "three/addons/postprocessing/EffectComposer.js";
 import { RenderPass } from "three/addons/postprocessing/RenderPass.js";
 import { UnrealBloomPass } from "three/addons/postprocessing/UnrealBloomPass.js";
 import { OutputPass } from "three/addons/postprocessing/OutputPass.js";
-import {clamp01, lerp, easeInOutSine} from "@/hooks/nubbin.js"
+import {clamp01, lerp, easeInOutSine} from "@/lib/nubbin.js"
 import MODEL from "@/assets/nubbin.glb";
 
 let hmrVersion = 0;
