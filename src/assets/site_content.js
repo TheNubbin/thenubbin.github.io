@@ -43,7 +43,7 @@ export const features = [
     eyebrow: "Game without",
     keyword: "Limits",
     description:
-      "Go beyond a screen and into fully immersive worlds that feel indistinguashable from reality. Explore distant galaxies, command ships, fight alongside your crew, and live out adventures that were once only possible in fiction. The only limit is your imagination.",
+      "Go beyond a screen and into fully immersive worlds that feel indistinguishable from reality. Explore distant galaxies, command ships, fight alongside your crew, and live out adventures that were once only possible in fiction. The only limit is your imagination.",
     img: gameBackground,
     img_ar: "20 / 9",
   },
