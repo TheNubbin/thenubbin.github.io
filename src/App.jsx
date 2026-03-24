@@ -33,7 +33,7 @@ import {
   siteTexts,
 } from "@/assets/site_content.js";
 
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 import NubbinCanvas from "@/components/NubbinCanvas";
 
@@ -341,74 +341,74 @@ export default function App() {
       <footer className="mx-auto w-full border-t border-white/10 bg-[#06070b]/80 z-50 relative">
         <div className="w-full px-5 py-10 lg:px-40 lg:py-10 grid gap-20 lg:grid-cols-4">
 
-                {/* ABOUT */}
-                <div className="col-span-2">
-                  <h3 className="text-sm font-semibold text-white">
-                    {siteTexts.footer.about.title}
-                  </h3>
+          {/* ABOUT */}
+          <div className="col-span-2">
+            <h3 className="text-sm font-semibold text-white">
+              {siteTexts.footer.about.title}
+            </h3>
 
-                  <p className="mt-4 text-sm leading-6 text-white/60">
-                    {siteTexts.footer.about.description}
-                  </p>
+            <p className="mt-4 text-sm leading-6 text-white/60">
+              {siteTexts.footer.about.description}
+            </p>
 
-                  <p className="mt-4 text-xs text-white/40">
-                    {siteTexts.footer.about.note}
-                  </p>
-                </div>
-
-
-                {/* LINKS */}
-                <div className="">
-                  <h3 className="text-sm font-semibold text-white">
-                    {siteTexts.footer.links.title}
-                  </h3>
-
-                  <ul className="mt-4 space-y-3 text-sm text-white/70">
-                    {siteTexts.footer.links.items.map((item) => (
-                      <li key={item} className="hover:text-white cursor-pointer">
-                        {item}
-                      </li>
-                    ))}
-                  </ul>
-                </div>
+            <p className="mt-4 text-xs text-white/40">
+              {siteTexts.footer.about.note}
+            </p>
+          </div>
 
 
-                {/* COMPANY */}
-                <div className="">
-                  <h3 className="text-sm font-semibold text-white">
-                    {siteTexts.footer.company.title}
-                  </h3>
+          {/* LINKS */}
+          <div className="">
+            <h3 className="text-sm font-semibold text-white">
+              {siteTexts.footer.links.title}
+            </h3>
 
-                  <ul className="mt-4 space-y-3 text-sm text-white/70">
-                    {siteTexts.footer.company.items.map((item) => (
-                      <li key={item} className="hover:text-white cursor-pointer">
-                        {item}
-                      </li>
-                    ))}
-                  </ul>
-                </div>
+            <ul className="mt-4 space-y-3 text-sm text-white/70">
+              {siteTexts.footer.links.items.map((item) => (
+                <li key={item} className="hover:text-white cursor-pointer">
+                  {item}
+                </li>
+              ))}
+            </ul>
+          </div>
 
-              </div>
+
+          {/* COMPANY */}
+          <div className="">
+            <h3 className="text-sm font-semibold text-white">
+              {siteTexts.footer.company.title}
+            </h3>
+
+            <ul className="mt-4 space-y-3 text-sm text-white/70">
+              {siteTexts.footer.company.items.map((item) => (
+                <li key={item} className="hover:text-white cursor-pointer">
+                  {item}
+                </li>
+              ))}
+            </ul>
+          </div>
+
+        </div>
         
 
         <div className="mx-4 border-t border-white/10 p-6 flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
-                <p className="text-xs text-white/40">
-                  {siteTexts.footer.copyright}
-                </p>
+          <p className="text-xs text-white/40">
+            {siteTexts.footer.copyright}
+          </p>
 
-                <div className="flex gap-6 text-xs text-white/50">
-                  <span className="hover:text-white cursor-pointer">
-                    <a href="/legal">{siteTexts.footer.bottomLinks.terms}</a>
-                  </span>
-                  <span className="hover:text-white cursor-pointer">
-                    {siteTexts.footer.bottomLinks.privacy}
-                  </span>
-                  <span className="hover:text-white cursor-pointer">
-                    {siteTexts.footer.bottomLinks.cookies}
-                  </span>
-                </div>
+          <div className="flex gap-6 text-xs text-white/50">
+            <span className="hover:text-white cursor-pointer">
+              <Link to="/legal">{siteTexts.footer.bottomLinks.terms}</Link>
+            </span>
+            <span className="hover:text-white cursor-pointer">
+              {siteTexts.footer.bottomLinks.privacy}
+            </span>
+            <span className="hover:text-white cursor-pointer">
+              {siteTexts.footer.bottomLinks.cookies}
+            </span>
+          </div>
 
-              </div>
+        </div>
       </footer>
     </div>
   );
