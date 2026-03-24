@@ -20,10 +20,10 @@ import {
 } from "@/components/ui/accordion";
 
 import "./App.css";
-import { SectionHeader } from "./components/section_header.jsx";
-import { GlowPanel } from "./components/glow_panel.jsx";
-import { Carousel } from "./components/carousel.jsx";
-import { Info } from "./components/info_card.jsx";
+import { SectionHeader } from "@/components/section_header.jsx";
+import { GlowPanel } from "@/components/glow_panel.jsx";
+import { Carousel } from "@/components/carousel.jsx";
+import { Info } from "@/components/info_card.jsx";
 import {
   partners,
   features,
@@ -31,11 +31,11 @@ import {
   consumerBenefits,
   developerLinks,
   siteTexts,
-} from "./assets/site_content.js";
+} from "@/assets/site_content.js";
 
 import { useNavigate } from "react-router-dom";
 
-import NubbinCanvas from "./components/NubbinCanvas";
+import NubbinCanvas from "@/components/NubbinCanvas";
 
 export default function App() {
   const navigate = useNavigate();
