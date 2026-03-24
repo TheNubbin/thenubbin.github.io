@@ -21,17 +21,17 @@ const termsSections = [
   {
     title: "Medical and safety disclaimer",
     icon: AlertTriangle,
-    body: "Nubbin products are experimental and not a substitute for licensed medical advice. Always consult a qualified professional before making health-related decisions.",
+    body: "Not recommended for users under 13 without verified guardian consent. Temporary dizziness, disorientation, or nosebleeds may occur after extended sessions. Do not use Nubbin while operating heavy machinery, driving, or supervising dependent persons.",
   },
   {
     title: "Liability limitations",
     icon: Scale,
-    body: "Liability placeholder",
+    body: "Any incidents that happen within an experience fall onto the responsibility of the developer. Any incidents outside of an experience will throughly investigated for signs of misuse. Any unathorized modification to your Nubbin relinquishes any liability Nubbin may have held.",
   },
   {
     title: "Privacy and data handling",
     icon: Lock,
-    body: "By using Nubbin services, you consent to collection and processing of operational and telemetry data as described in our Privacy Policy.",
+    body: "You consent to collection and processing of operational and telemetry data as described. We may collect account details, device information, usage activity, session diagnostics, location data, support requests, and any content accessed through Nubbin services. We use collected information to provide, maintain, improve, and personalize Nubbin services. We retain information for as long as reasonably necessary to provide services.",
   },
 ];
 
@@ -56,14 +56,13 @@ export default function Terms() {
         <SectionHeader
           eyebrow="Legal"
           title="Terms and Conditions"
-          description="Clear legal language with the same visual style used across the landing experience."
         />
 
         <GlowPanel className="mt-10 border border-white/10 bg-white/5 p-6 md:p-8">
           <p className="max-w-4xl text-sm leading-7 text-white/70 md:text-base">
             These Terms and Conditions ("Terms") govern your access to and use of
             Nubbin products, software, websites, and developer services provided by
-            FutureCorp. By accessing or using any Nubbin service, you agree to these
+            Temple. By accessing or using any Nubbin service, you agree to these
             Terms.
           </p>
 

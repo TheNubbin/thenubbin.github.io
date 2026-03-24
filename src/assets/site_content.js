@@ -34,7 +34,7 @@ export const features = [
     eyebrow: "Unleash your",
     keyword: "Senses",
     description:
-      "A showcase area for emotional recall, sensory playback, and tightly controlled corporate messaging.",
+      "Nubbin allows you to explore your own mind in ways that once felt impossible. Step back into your most meaningful memories with a level of clarity and presence that photos and videos could never touch. Whether revisiting the past or stepping into something entirely new, Nubbin makes every experience feel fully alive.",
     img: sensesBackground,
     img_ar: "16 / 9",
   },
@@ -43,7 +43,7 @@ export const features = [
     eyebrow: "Game without",
     keyword: "Limits",
     description:
-      "A cinematic product section for immersive gameplay, responsive motion, and full sensory interaction.",
+      "Go beyond a screen and into fully immersive worlds that feel indistinguashable from reality. Explore distant galaxies, command ships, fight alongside your crew, and live out adventures that were once only possible in fiction. The only limit is your imagination.",
     img: gameBackground,
     img_ar: "20 / 9",
   },
@@ -52,7 +52,7 @@ export const features = [
     eyebrow: "Hear exceptional",
     keyword: "Sound",
     description:
-      "A media block for premium audio storytelling, performance scenes, and luxury-brand positioning.",
+      "From voices and songs to concerts and movies. Nubbin delivers sound straight to the mind for a richer, clearer, and more accessible experience. No speakers, no headphones, no aids, just seamless connection.",
     img: musicBackground,
     img_ar: "2039 / 1131",
   },
@@ -61,51 +61,67 @@ export const features = [
 export const faqs = [
   {
     q: "How is my data managed?",
-    a: "Please see our terms and conditions for full details on storage, access, and service optimization.",
+    a: "We collect only the data necessary to provide, maintain, and improve Nubbin services. Please see our Terms and Conditions for full details regarding storage, access, and service optimization.",
   },
   {
-    q: "Can it access thoughts?",
-    a: "The Nubbin does not access thoughts without user consent.*",
+    q: "How does Nubbin access my thoughts?",
+    a: "The Nubbin does not access conscious thoughts without user consent.*"
+  },
+  {
+    q: "Can someone else view my memories?",
+    a: "Shared memory viewing is available only through approved permissions, managed access settings, or authorized legacy requests.",
   },
   {
     q: "Can someone hack my Nubbin?",
-    a: "All transmissions are end-to-end encrypted. Hacking of your Nubbin is unlikely.",
+    a: "All transmissions are end-to-end encrypted. Unauthorized access of your Nubbin is highly unlikely under normal conditions. Users are repsonsible for maintaining basic digital safetey practices.",
+  },
+  {
+    q: "What happens when I am not using the Nubbin?",
+    a: "Inactive sessions may retain limited background processes to ensure continuity, personalization, and seamless re-entry.",
+  },
+  {
+    q: "What happens to memories I delete?",
+    a: "Deleted memory files are removed from active user view. Data may be temporarily retained for security purposes up to 180 days.",
+  },
+  {
+    q: "Who owns my memories?",
+    a: "Users retain ownership of their biological memories. Derived, assisted, or reconstructed memory assets may be processed in accordance with service agreements.*",
   },
   {
     q: "Is it possible to become stuck in an experience?",
     a: "Users with a physical connection to reality can exit any experience at will.",
   },
   {
-    q: "Who owns my memories?",
-    a: "Users retain ownership of their biological memories. User data may be used to improve services.*",
+    q: "Can Nubbin create copies of people?",
+    a: "No. We also actively discourage any injection of a digitalized persons. Use of third-party-systems to generate DNA code will terminate your Nubbin contract. Any irregularities in online persons should be reported to the correct forums of each respective experience.",
   },
   {
-    q: "Can I die using Nubbin?",
-    a: "Independent investigations concluded incidents were the result of improper use. When used as directed, Nubbin is safer than driving a car.",
+    q: "What happened to users that went 'offline' permanently while using the Nubbin?",
+    a: "Independent investigations concluded incidents were the result of improper use. When used as directed, Nubbin remains safer than driving a car.",
   },
 ];
 
 export const consumerBenefits = [
   "Installation takes under 12 minutes.",
-  "High survival rate.",
+  "Trusted by millions of users.",
   "Fully reversible.*",
   "Zero visible scarring.",
-  "You won’t even notice it’s there.",
-  "Results may vary.",
+  "High survival rate.",
+  "Essentially unnoticeable.",
 ];
 
 export const developerLinks = [
   "Request a Nubbin Dev Kit",
   "Download SDK",
   "Access simulation environment",
-  "Review neural integration docs",
+  "Documentation",
 ];
 
 export const siteTexts = {
   // Header
   header: {
-    logo: "NUBBIN",
-    tagline: "Neural Experience Platform",
+    logo: "TEMPLE",
+    tagline: "The Nubbin",
     nav: {
       overview: "Overview",
       product: "Product",
@@ -121,7 +137,7 @@ export const siteTexts = {
     title: "Step into the future with",
     titleHighlight: "Nubbin",
     description:
-      "A dark, polished landing page framework for a fictional brain-chip company. Sleek on the surface, unsettling underneath.",
+      "See more. Hear more. Feel more. The future of human experience is here.",
   },
 
   // Partners Carousel
@@ -142,7 +158,7 @@ export const siteTexts = {
     eyebrow: "For consumers",
     title: "Upgrade yourself.",
     description:
-      "A benefit-heavy section that sounds reassuring while quietly implying risk.",
+      "Learn about the installation procedure and request your Nubbin today.",
     buttonText: "Learn more",
   },
 
@@ -151,7 +167,7 @@ export const siteTexts = {
     eyebrow: "For developers",
     title: "Build the future.",
     description:
-      "A companion block for SDK access, dev kits, and cheerful legal language.",
+      "We provide many resources for creating cutting-edge experiences.",
     disclaimer: "*Developer assumes all legal responsibilities.",
   },
 
@@ -177,18 +193,18 @@ export const siteTexts = {
     about: {
       title: "About us",
       description:
-        "We build experimental tools, developer kits, and consumer upgrades designed to make the future slightly more predictable and slightly more confusing.",
-      note: "Founded somewhere between optimism and legal review.",
-    },
+        "Here at Temple, we built Nubbin on a simple idea: technology should not distance us from life, but bring us closer to it. We believe the future of personal technology lies in seamless integration between mind and machine. By combining neural interface research with consumer-first design, Nubbin creates experiences that feel more immediate, more intuitive, and more human than ever before.",
+      note: "The Nubbin is a Temple Product.",
+    }, 
     links: {
       title: "Links",
-      items: ["Documentation", "Developers", "API status", "Privacy"],
+      items: ["Documentation", "SDK", "API status", "Privacy"],
     },
     company: {
       title: "Company",
       items: ["About", "Careers", "Contact", "Press"],
     },
-    copyright: "© 2026 Carmen Tan. All rights reserved.",
+    copyright: "© 2026 Carmen Tan. No rights reserved.",
     bottomLinks: {
       terms: "Terms and Conditions",
     },

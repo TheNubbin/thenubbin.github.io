@@ -33,9 +33,13 @@ import {
   siteTexts,
 } from "./assets/site_content.js";
 
+import { useNavigate } from "react-router-dom";
+
 import NubbinCanvas from "./components/NubbinCanvas";
 
 export default function App() {
+  const navigate = useNavigate();
+
   return (
     <div
       className="min-h-screen bg-[#06070b] text-white"
@@ -84,7 +88,7 @@ export default function App() {
             </a>
           </nav>
 
-          <Button href="/legal" className="rounded-full bg-white text-black hover:bg-white/90">
+          <Button onClick={() => navigate("/legal")} className="rounded-full bg-white text-black hover:bg-white/90">
             {siteTexts.header.nav.terms}
           </Button>
 
@@ -114,59 +118,6 @@ export default function App() {
               </p>
             </div>
           </div>
-          
-
-          {/*<GlowPanel className="min-h-[520px] p-6 md:p-8">
-             <div className="grid h-full gap-6 md:grid-rows-[auto_1fr_auto]">
-              <div className="flex items-center justify-between">
-                <div>
-                  <p className="text-sm text-white/50">
-                    Flagship Device
-                  </p>
-                  <h3 className="text-2xl font-medium">
-                    Nubbin X
-                  </h3>
-                </div>
-                <Badge className="rounded-full border border-violet-300/30 bg-violet-300/10 text-violet-200 hover:bg-violet-300/10">
-                  Gen 4 Neural Shell
-                </Badge>
-              </div>
-
-              <div className="relative flex items-center justify-center overflow-hidden rounded-[1.75rem] border border-white/10 bg-gradient-to-br from-[#0e1220] via-[#0a0d15] to-[#111426]">
-
-                <div className="pointer-events-none absolute inset-x-8 bottom-8 rounded-2xl border border-white/10 bg-black/30 p-4 backdrop-blur-md">
-                  <div className="flex items-center justify-between text-sm">
-                    <span className="text-white/50">
-                      Interactive 3D model placeholder
-                    </span>
-                    
-                    <span className="text-cyan-300">
-                      Scroll to orbit
-                    </span>
-                  </div>
-                </div>
-              </div>
-
-              <div className="grid grid-cols-3 gap-3 text-sm">
-                {[
-                  ["Install time", "< 12 min"],
-                  ["Reversibility", "Partial*"],
-                  ["Visible scarring", "Minimal"],
-                ].map(([label, value]) => (
-                  <div
-                    key={label}
-                    className="rounded-2xl border border-white/10 bg-white/5 p-4"
-                  >
-                    <p className="text-white/45">{label}</p>
-                    <p className="pt-2 text-lg font-medium text-white">
-                      {value}
-                    </p>
-                  </div>
-                ))}
-              </div>
-            </div> 
-            
-          </GlowPanel>*/}
         </section>
 
         <div className="flex flex-col gap-1 pt-1"
@@ -180,13 +131,13 @@ export default function App() {
           <Carousel logos={partners}></Carousel>
         </div>
 
-        <section id="product" className="w-full py-4 flex flex-col">
-          <SectionHeader
+        <section id="product" className="w-full py-4 flex flex-col my-5">
+          {/* <SectionHeader
             className="m-auto max-w-7xl px-4"
             eyebrow={siteTexts.product.eyebrow}
             title={siteTexts.product.title}
             description={siteTexts.product.description}
-          />
+          /> */}
           
           {features.map((f, i) => {
             const getNubbinValues = (index) => {
@@ -217,61 +168,7 @@ export default function App() {
               />
             );
           })}
-
-          
         </section>
-
-        {/* <section id="forPanel" className="mx-auto max-w-7xl px-6 py-12 lg:px-10 lg:py-16">
-          <div className="grid gap-6 lg:grid-cols-[1fr_1fr]">
-            <GlowPanel id="consumers" className="mx-auto max-w-7xl px-6 py-8 lg:px-10 lg:py-16">
-              <SectionHeader
-                eyebrow="For consumers" 
-                title="Upgrade yourself."
-                description="A benefit-heavy section that sounds reassuring while quietly implying risk."
-              />
-
-              <div className="mt-8 grid gap-4 sm:grid-cols-2">
-                {consumerBenefits.map((item) => (
-                  <div
-                    key={item}
-                    className="flex items-center rounded-2xl border border-white/10 bg-black/20 p-4 text-sm text-white/75"
-                  >
-                    {item}
-                  </div>
-                ))}
-              </div>
-
-              <Button className={"default mt-6 rounded-2xl border! border-yellow-600/2! bg-yellow-500/10! p-4 text-sm leading-7 text-yellow-100/90"}>
-                Learn more
-              </Button>
-            </GlowPanel>
-
-            <GlowPanel id="developers" className="mx-auto max-w-7xl px-6 py-8 lg:px-10 lg:py-16 z-20">
-              <SectionHeader
-                eyebrow="For developers"
-                title="Build the future."
-                description="A companion block for SDK access, dev kits, and cheerful legal language."
-              />
-
-              <div className="mt-8 space-y-4">
-                {developerLinks.map((item) => (
-                  <div
-                    key={item}
-                    className="flex z-20 items-center justify-between rounded-2xl border border-white/10 bg-black/20 px-4 py-4 text-sm text-white/80"
-                  >
-                    <span>{item}</span>
-                    <ChevronRight className="h-4 w-4 text-white/45" />
-                  </div>
-                ))}
-              </div>
-
-              <div className="mt-6 rounded-2xl border border-yellow-600/20 bg-yellow-500/10 p-4 text-sm leading-7 text-yellow-100/90">
-                *Developer assumes all legal responsibilities.
-              </div>
-            </GlowPanel>
-          </div>
-        </section> */}
-
         <section
           id="consumers"
           className="mx-auto max-w-7xl px-6 py-12 lg:px-10 lg:py-16"
@@ -368,7 +265,7 @@ export default function App() {
 
         <section
           id="faq"
-          className="mx-auto max-w-7xl px-6 py-12 lg:px-10 lg:py-16 z-20"
+          className="mx-auto max-w-7xl px-6 pt-12 lg:px-10 lg:pt-16 z-20"
         >
           <SectionHeader
             eyebrow={siteTexts.faq.eyebrow}
@@ -381,12 +278,12 @@ export default function App() {
                 <AccordionItem
                   key={item.q}
                   value={`item-${index}`}
-                  className="border-white/10"
+                  className=""
                 >
                   <AccordionTrigger className="!bg-transparent !text-3xl text-base text-white hover:no-underline bg-transparent z-20">
                     {item.q}
                   </AccordionTrigger>
-                  <AccordionContent className="border border-white pl- max-w-3xl text-xl leading-7 text-white/65 z-20">
+                  <AccordionContent className="pl-15 pb-5 max-w-4xl text-xl leading-7 text-white/65 z-20">
                     {item.a}
                   </AccordionContent>
                 </AccordionItem>
@@ -400,8 +297,8 @@ export default function App() {
         </section>
 
 
-        <section id="newsletter" className="mx-auto max-w-4xl px-6 py-16 lg:px-10">
-          <div className="w-full px-6 py-10 lg:px-12 lg:py-4">
+        <section id="newsletter" className="mx-auto max-w-4xl px-6 py-16 lg:px-10 z-50 relative">
+          <div className="w-full px-6 py-10 lg:px-12 lg:py-14">
               <SectionHeader
                   eyebrow={siteTexts.newsletter.eyebrow}
                   title={siteTexts.newsletter.title}
@@ -436,98 +333,16 @@ export default function App() {
                     {siteTexts.newsletter.buttonText}
                   </Button>
                 </div>
-              {/* <Card className="border-0 bg-transparent shadow-none">
-              <CardHeader className="p-0 flex flex-col">
-                <SectionHeader
-                  eyebrow="Newsletter"
-                  title="Stay updated"
-                  description="Get important news and updates about Nubbin."
-                />
-              </CardHeader>
-
-              <CardContent className="flex flex-col mt-8 p-0">
-                <div className="flex flex-col gap-4 sm:flex-row">
-                  <Input
-                    placeholder="Enter your email"
-                    className="
-                      h-12
-                      rounded-2xl
-                      border-white/10
-                      bg-black/20
-                      text-white
-                      placeholder:text-white/40
-                      focus-visible:ring-0
-                      focus-visible:ring-offset-0
-                    "
-                  />
-
-                  <Button
-                    className="
-                      h-12
-                      rounded-2xl
-                      border border-yellow-600/20
-                      bg-yellow-500/10
-                      px-6
-                      text-yellow-100/90
-                      hover:bg-yellow-500/20
-                    "
-                  >
-                    Subscribe
-                  </Button>
-  </div>
-              </CardContent>
-
-              <CardFooter className="p-0 pt-4 bg-transparent">
-                <p className="text-xs text-white/40">
-                  We only send important updates. No spam. Unsubscribe anytime.
-                </p>
-              </CardFooter>
-            </Card> */}
           </div>
         </section>
-
-{/* <section className="mx-auto max-w-7xl px-6 py-12 lg:px-10 lg:py-16">
-          <GlowPanel className="p-8 md:p-10 z-20">
-            <div className="grid gap-8 lg:grid-cols-[0.85fr_1.15fr]">
-              <div>
-                <p className="text-xs uppercase tracking-[0.28em] text-red-300/70">
-                  Terms and conditions
-                </p>
-                <h2 className="mt-3 text-3xl font-semibold tracking-tight text-white md:text-4xl">
-                  Liability, consent, and the fine print.
-                </h2>
-                <p className="mt-4 text-sm leading-7 text-white/60">
-                  This is where the page can tilt from
-                  aspirational branding into quietly
-                  horrifying disclosures.
-                </p>
-              </div>
-
-              <div className="grid gap-4 sm:grid-cols-2">
-                {finePrint.map((line) => (
-                  <div
-                    key={line}
-                    className="rounded-2xl border border-white/10 bg-black/25 p-5 text-sm leading-7 text-white/75"
-                  >
-                    {line}
-                  </div>
-                ))}
-              </div>
-            </div>
-          </GlowPanel>
-        </section> */}
       </main>
 
 
-      <footer className="mx-auto w-full pt-16 border-t border-white/10 bg-[#06070b]/80 z-50">
-        <div className="w-full px-40 py-10 lg:px-40 lg:py-14 grid gap-1 lg:grid-cols-3">
-{/* <Card className="border-0 bg-transparent shadow-none">
-            <CardContent className="p-0"> */}
-
-             
+      <footer className="mx-auto w-full border-t border-white/10 bg-[#06070b]/80 z-50 relative">
+        <div className="w-full px-5 py-10 lg:px-40 lg:py-10 grid gap-20 lg:grid-cols-4">
 
                 {/* ABOUT */}
-                <div className="">
+                <div className="col-span-2">
                   <h3 className="text-sm font-semibold text-white">
                     {siteTexts.footer.about.title}
                   </h3>
@@ -576,8 +391,7 @@ export default function App() {
               </div>
         
 
-        <div className="mx-4 mt-12 border-t border-white/10 p-6 flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
-
+        <div className="mx-4 border-t border-white/10 p-6 flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
                 <p className="text-xs text-white/40">
                   {siteTexts.footer.copyright}
                 </p>
